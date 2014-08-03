@@ -1,5 +1,6 @@
 <!-- X55 Joystick + HOTAS mapping -->
-<!-- pp_rebindkeys C:\Hotas\x55_KEEN -->
+<!-- Config XML inspiré du fichier X55_KEEN.xml, merci à lui pour son boulot -->
+<!-- pp_rebindkeys "directory"\x55.xml -->
 <!-- js1 => Throttle js2 => Joystick -->
 <!-- 
 Concordance js2 joystick
@@ -53,11 +54,44 @@ H4_down = js1_button26
 H4_left = js1_button27
 KI_Down = js1_button28
 KI_UP = js1_button29
+
+Liste des actionmap :
+spaceship_view => Controle camera du vaisseau
+spaceship_movement => Controle spatiale du vaisseau
+spaceship_targeting => Controle de ciblage du vaisseau
+spaceship_weapons => Controle des armes du vaisseau
+spaceship_missiles => Controle des missiles du vaisseau
+spaceship_defensive => Controles de contre-mesures du vaisseau
+
+Liste des action name par actionmap :
+	spaceship_view :
+		v_view_cycle_fwd =>
+		v_view_dynamic_focus_toggle =>
+		v_view_track_target =>
+	spaceship_movement :
+		v_throttle =>
+		v_afterburner =>
+		v_pitch => 
+		v_roll =>
+		v_yaw =>
+		v_target_match_vel =>
+		v_ifcs_toggle_vector_decoupling =>
+		v_ifcs_toggle_safety =>
+		v_newtonian_pitch =>
+		v_newtonian_roll =>
+		v_newtonian_yaw =>
+	spaceship_targeting :
+		
+Structure à completer :
+
+<ActionMaps version="0" >
+	<actionmap name="actionmap_name">
+</ActionMaps>
 -->
 
 
 <ActionMaps version="0" >
- 	<actionmap name="spaceship_view">
+ 	<actionmap name="spaceship_view"> <!-- Controle camera du vaisseau -->
 		<action name="v_view_cycle_fwd">
 			<rebind device="joystick" input="js2_button6" />
 		</action>
@@ -69,7 +103,7 @@ KI_UP = js1_button29
         </action>
 	</actionmap>
 		
- 	<actionmap name="spaceship_movement">
+ 	<actionmap name="spaceship_movement"> <!-- Controle spatiale du vaisseau -->
 		<!-- BASICS -->
 		<action name="v_throttle">
 			<rebind device="joystick" input="js1_throttley" />
