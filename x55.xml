@@ -1,0 +1,168 @@
+<!-- X55 Joystick + HOTAS mapping -->
+<!-- pp_rebindkeys C:\Hotas\x55_KEEN -->
+<!-- js1 => Throttle js2 => Joystick -->
+<!-- 
+Concordance js2 joystick
+
+POV = js2_hat1_"attribut"  |down,up,left,right|
+red_trigger = js2_button1
+A = js2_button2
+B =  js2_button3
+C = js2_button4 
+D = js2_button5
+grey_trigger =  js2_button6
+H1_UP = js2_button7
+H1_RIGHT = js2_button8
+H1_DOWN = js2_button9
+H1_LEFT = js2_button10
+H2_UP = js2_button11
+H2_RIGHT = js2_button12
+H2_DOWN = js2_button13
+H2_LEFT = js2_button14
+
+Concordance js1 throttle
+SLD = Aucune info pour le moment
+throttle_left = js1_throttlex
+throttle_right = js1_throttley 
+E = js1_button1
+G = js1_button2
+F = js1_button3
+H = js1_button4
+I = js1_button5
+SW1 = js1_button6
+SW2 = js1_button7	
+SW3 = js1_button8
+SW4 = js1_button9
+SW5 = js1_button10
+SW6 = js1_button11
+TGL1_UP = js1_button12
+TGL1_DOWN = js1_button13
+TGL2_UP = js1_button14
+TGL2_DOWN = js1_button15
+TGL3_UP = js1_button16
+TGL3_DOWN = js1_button17
+TGL4_UP = js1_button18
+TGL4_DOWN =js1_button19
+H3_up = js1_button20
+H3_right = js1_button21
+H3_down = js1_button22
+H3_left = js1_button23
+H4_up = js1_button24
+H4_right = js1_button25
+H4_down = js1_button26
+H4_left = js1_button27
+KI_Down = js1_button28
+KI_UP = js1_button29
+-->
+
+
+<ActionMaps version="0" >
+ 	<actionmap name="spaceship_view">
+		<action name="v_view_cycle_fwd">
+			<rebind device="joystick" input="js2_button6" />
+		</action>
+		<action name="v_view_dynamic_focus_toggle">
+			<rebind device="joystick" input="js1_button25" />
+		</action>
+		<action name="v_view_track_target"> 
+            <rebind device="joystick" input="js1_button1" /> 
+        </action>
+	</actionmap>
+		
+ 	<actionmap name="spaceship_movement">
+		<!-- BASICS -->
+		<action name="v_throttle">
+			<rebind device="joystick" input="js1_throttley" />
+		</action>
+		<action name="v_afterburner">
+			<rebind device="joystick" input="js1_button5" />
+		</action>
+		<action name="v_pitch">
+			<rebind device="joystick" input="js2_y" />
+		</action>
+		<action name="v_roll">
+			<rebind device="joystick" input="js2_x" />
+		</action>
+		<action name="v_yaw">
+			<rebind device="joystick" input="js2_rotz" />
+		</action>
+
+		<!-- TARGETING -->
+		<!--
+		<action name="v_target_match_vel">
+			<rebind device="joystick" input="js1_button28" />
+		</action>	
+		-->
+		<action name="v_target_match_vel">
+			<rebind device="joystick" input="js1_button4" />
+		</action>
+		
+		<!-- IFCS -->
+		<action name="v_ifcs_toggle_vector_decoupling">
+			<rebind device="joystick" input="js1_button1"/>
+		</action>
+		<action name="v_ifcs_toggle_safety">
+			<rebind device="joystick" input="js1_button2"/>
+		</action>
+		<action name="v_newtonian_pitch">
+			<rebind device="joystick" input="js2_y"/>
+		</action>
+		<action name="v_newtonian_roll">
+			<rebind device="joystick" input="js2_x"/>
+		</action>
+		<action name="v_newtonian_yaw">
+			<rebind device="joystick" input="js2_rotz"/>
+		</action>
+	</actionmap>
+	
+ 	<actionmap name="spaceship_targeting"> <!-- Ciblage du vaisseau -->
+		<action name="v_target_missile_lock_focused"> <!-- Lock missile du vaisseau -->
+			<!-- <rebind device="joystick" input="js2_button4" /> -->
+			<rebind device="joystick" input="js2_button2" />
+		</action>		
+		<action name="v_target_cycle_all_back">
+			<rebind device="joystick" input="js2_hat1_left" />
+		</action>	
+		<action name="v_target_cycle_all_fwd">
+			<rebind device="joystick" input="js2_hat1_up" />
+		</action>
+		<action name="v_target_nearest_hostile"> <!-- Cible ennemie la plus proche -->
+			<rebind device="joystick" input="js2_button13" />
+		</action>	
+		<action name="v_target_cycle_hostile_fwd"> <!-- Cible ennemie suivante -->
+			<rebind device="joystick" input="js2_button12" />
+		</action>	
+	</actionmap>	
+	
+ 	<actionmap name="spaceship_weapons">
+		<action name="v_attack1_group1">
+			<rebind device="joystick" input="js2_button1" />	
+		</action>
+		<action name="v_attack1_group2">
+			<!-- <rebind device="joystick" input="js2_button2" />/> -->
+			<rebind device="joystick" input="js2_button4"  />
+		</action>
+		<action name="v_attack1_group3">
+			<rebind device="joystick" input="" />
+		</action>		
+	</actionmap>
+	
+ 	<actionmap name="spaceship_missiles">
+		<action name="v_weapon_cycle_missile_fwd">
+			<rebind device="joystick" input="js2_button3" />
+		</action>	
+		<action name="v_weapon_launch_missile">
+			<!--<rebind device="joystick" input="js2_button4" />-->
+			 <rebind device="joystick" input="js2_button2" /> 
+		</action>
+	</actionmap>
+	
+ 	<actionmap name="spaceship_defensive">
+		<action name="v_weapon_launch_countermeasure">
+			<rebind device="joystick" input="js2_button5" />
+		</action>
+		<action name="v_weapon_cycle_countermeasure_fwd">
+			<rebind device="joystick" input="" />
+		</action>
+	</actionmap>
+</ActionMaps>
